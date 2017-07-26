@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    tools:context="com.example.jinyaliang.homepage.MainActivity">
+
+    <!--下面是房间主页个人的控件-->
+    <RadioGroup
+        android:id="@+id/rg_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_homepage"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_hp"
+            android:text="主页" />
+
+        <RadioButton
+            android:id="@+id/rb_room"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_room"
+            android:text="房间" />
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_mine"
+            android:text="个人" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/rg_tab_bar"
+        android:background="#455A64" />
+
+    <!--这个是中间的区域，每一页都不一样 -->
+    <FrameLayout
+        android:id="@+id/ly_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rg_tab_bar"
+        ></FrameLayout>
+
+</RelativeLayout>

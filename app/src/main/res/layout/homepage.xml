@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 搜索框 -->
+    <SearchView android:id="@+id/sv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:queryHint="@string/searchIfo"
+        android:layout_gravity="right"/>
+
+    <!-- 为SearchView定义自动完成的ListView
+    <ListView android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        /> -->
+
+    <View
+        android:id="@+id/search_ad_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/rg_tab_bar"
+        android:background="@color/colorPrimaryDark" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="180dp" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@mipmap/p2"/>
+
+        <LinearLayout
+            android:id="@+id/dotLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="right|bottom"
+            android:orientation="horizontal"
+            android:background="#BDBDBD"
+            android:padding="8dp" >
+
+            <View
+                android:id="@+id/v_dot1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/dot_line" />
+
+            <View
+                android:id="@+id/v_dot2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:background="@mipmap/dot" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tuantiwu"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp" />
+
+        <View
+            android:id= "@+id/strut"
+            android:layout_width= "0dp"
+            android:layout_height= "0dp"
+            android:layout_centerHorizontal="true" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/strut"
+            android:layout_below="@+id/txt_topbar"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/p1"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/strut"
+            android:layout_below="@+id/txt_topbar"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/p1"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
