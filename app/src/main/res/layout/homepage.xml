@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical"
+    android:fadingEdge="vertical">
+<LinearLayout
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -7,94 +13,287 @@
     <SearchView android:id="@+id/sv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="right"
         android:queryHint="@string/searchIfo"
-        android:layout_gravity="right"/>
+        />
 
     <!-- 为SearchView定义自动完成的ListView
     <ListView android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         /> -->
-
+    <!-- 分割线 -->
     <View
-        android:id="@+id/search_ad_bar"
+        android:id="@+id/va0"
         android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:layout_above="@id/rg_tab_bar"
-        android:background="@color/colorPrimaryDark" />
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="180dp" >
-
+        android:layout_height="10px"
+        android:background="@color/colorWhite" />
+    <!-- 推荐区域 -->
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBright"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <!-- 显示文字“推荐” -->
+        <TextView
+            android:id="@+id/tuijian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tuijian"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp" />
+        <!-- 用于滑动显示几张图片，点击后播放视频 -->
         <android.support.v4.view.ViewPager
-            android:id="@+id/view_pager"
+            android:id="@+id/vptuijian"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:background="@mipmap/p2"/>
-
+        <!-- 用于显示是否选中的点，目前有三个，可根据需要增加 -->
         <LinearLayout
-            android:id="@+id/dotLayout"
+            android:id="@+id/dotLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:gravity="right|bottom"
             android:orientation="horizontal"
-            android:background="#BDBDBD"
             android:padding="8dp" >
-
             <View
-                android:id="@+id/v_dot1"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@mipmap/dot_line" />
-
-            <View
-                android:id="@+id/v_dot2"
+                android:id="@+id/v_dota"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginLeft="5dp"
                 android:background="@mipmap/dot" />
+            <View
+                android:id="@+id/v_dota1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/dot_line" />
+            <View
+                android:id="@+id/v_dota2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/dot_line" />
+
         </LinearLayout>
-
-    </RelativeLayout>
-
-    <RelativeLayout
+    </LinearLayout>
+    <!-- 分割线-->
+    <View
+        android:id="@+id/va1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="10px"
+        android:background="@color/colorWhite" />
+    <!-- 健身操区域-->
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBright"
+        android:padding="10dp"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txt_topbar"
+            android:id="@+id/jianshencao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/tuantiwu"
+            android:text="@string/jianshencao"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp" />
 
-        <View
-            android:id= "@+id/strut"
-            android:layout_width= "0dp"
-            android:layout_height= "0dp"
-            android:layout_centerHorizontal="true" />
-        <ImageView
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpjianshencao"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@mipmap/p1"/>
+        <LinearLayout
+            android:id="@+id/dotLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignRight="@id/strut"
-            android:layout_below="@+id/txt_topbar"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:background="@mipmap/p1"/>
-
-        <ImageView
+            android:layout_alignParentBottom="true"
+            android:gravity="right|bottom"
+            android:orientation="horizontal"
+            android:background="@color/colorBright"
+            android:padding="8dp" >
+            <View
+                android:id="@+id/v_dotb"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:background="@mipmap/dot" />
+            <View
+                android:id="@+id/v_dotb1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/dot_line" />
+            <View
+                android:id="@+id/v_dotb2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/dot_line" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 分割线-->
+    <View
+        android:id="@+id/va2"
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="@color/colorWhite" />
+    <!-- 民族舞区域-->
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBright"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/minzuwu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/strut"
-            android:layout_below="@+id/txt_topbar"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_alignParentRight="true"
+            android:text="@string/minzuwu"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpminzuwu"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@mipmap/p2"/>
+        <LinearLayout
+            android:id="@+id/dotLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="right|bottom"
+            android:orientation="horizontal"
+            android:background="@color/colorBright"
+            android:padding="8dp" >
+            <View
+                android:id="@+id/v_dotc"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:background="@mipmap/dot" />
+            <View
+                android:id="@+id/v_dotc1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/dot_line" />
+            <View
+                android:id="@+id/v_dotc2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/dot_line" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 分割线-->
+    <View
+        android:id="@+id/va3"
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="@color/colorWhite" />
+    <!-- 街舞区域-->
+    <LinearLayout
+        android:id="@+id/ll4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBright"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/jiewu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/jiewu"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpjiewu"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             android:background="@mipmap/p1"/>
+        <LinearLayout
+            android:id="@+id/dotLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="right|bottom"
+            android:orientation="horizontal"
+            android:background="@color/colorBright"
+            android:padding="8dp" >
+            <View
+                android:id="@+id/v_dotd"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:background="@mipmap/dot" />
+            <View
+                android:id="@+id/v_dotd1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/dot_line" />
+            <View
+                android:id="@+id/v_dotd2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/dot_line" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 分割线-->
+    <View
+        android:id="@+id/va4"
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="@color/colorWhite" />
+    <!-- 现代舞区域 -->
+    <LinearLayout
+        android:id="@+id/ll5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBright"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/xiandaiwu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/xiandaiwu"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp" />
 
-    </RelativeLayout>
-
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpxiandaiwu"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@mipmap/p2"/>
+        <LinearLayout
+            android:id="@+id/dotLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="right|bottom"
+            android:orientation="horizontal"
+            android:background="@color/colorBright"
+            android:padding="8dp" >
+            <View
+                android:id="@+id/v_dote"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:background="@mipmap/dot" />
+            <View
+                android:id="@+id/v_dote1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/dot_line" />
+            <View
+                android:id="@+id/v_dote2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/dot_line" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
+</ScrollView>
