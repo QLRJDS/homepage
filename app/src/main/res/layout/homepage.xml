@@ -37,13 +37,26 @@
         android:padding="10dp"
         android:orientation="vertical">
         <!-- 显示文字“推荐” -->
-        <TextView
-            android:id="@+id/tuijian"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/tuijian"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20dp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tuijian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tuijian"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp" />
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/enter"/>
+        </RelativeLayout>
+
         <!-- 用于滑动显示几张图片，点击后播放视频 -->
         <android.support.v4.view.ViewPager
             android:id="@+id/vptuijian"
@@ -92,14 +105,26 @@
         android:background="@color/colorBright"
         android:padding="10dp"
         android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/jianshencao"
-            android:layout_width="match_parent"
+        <RelativeLayout
             android:layout_height="wrap_content"
-            android:text="@string/jianshencao"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20dp" />
+            android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/jianshencao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/jianshencao"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp" />
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/enter"/>
+        </RelativeLayout>
+
 
         <android.support.v4.view.ViewPager
             android:id="@+id/vpjianshencao"
@@ -147,14 +172,25 @@
         android:background="@color/colorBright"
         android:padding="10dp"
         android:orientation="vertical">
-        <TextView
-            android:id="@+id/minzuwu"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/minzuwu"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20dp" />
-
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/minzuwu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/minzuwu"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp" />
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/enter"/>
+        </RelativeLayout>
         <android.support.v4.view.ViewPager
             android:id="@+id/vpminzuwu"
             android:layout_width="match_parent"
@@ -201,14 +237,25 @@
         android:background="@color/colorBright"
         android:padding="10dp"
         android:orientation="vertical">
-        <TextView
-            android:id="@+id/jiewu"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/jiewu"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20dp" />
-
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/jiewu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/jiewu"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp" />
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/enter"/>
+        </RelativeLayout>
         <android.support.v4.view.ViewPager
             android:id="@+id/vpjiewu"
             android:layout_width="match_parent"
@@ -255,14 +302,25 @@
         android:background="@color/colorBright"
         android:padding="10dp"
         android:orientation="vertical">
-        <TextView
-            android:id="@+id/xiandaiwu"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/xiandaiwu"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20dp" />
-
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/xiandaiwu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/xiandaiwu"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp" />
+            <ImageView
+                android:id="@+id/iv5"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/enter"/>
+        </RelativeLayout>
         <android.support.v4.view.ViewPager
             android:id="@+id/vpxiandaiwu"
             android:layout_width="match_parent"
